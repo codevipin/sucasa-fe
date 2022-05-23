@@ -5,6 +5,10 @@ export interface LoadAllPresentationAction extends ReduxAction {
   presentations: Presentation[];
 }
 
+export interface LoadPresentationAction extends ReduxAction {
+  presentation: Presentation;
+}
+
 export type LoadAllPresentationDispatchType = (
   args: LoadAllPresentationAction
 ) => LoadAllPresentationAction;
@@ -12,3 +16,7 @@ export type LoadAllPresentationDispatchType = (
 export interface PresentationsState {
   presentations: Presentation[];
 }
+
+export type LoadPresentationDispatchType = (
+  args: LoadPresentationAction
+) => LoadPresentationAction;

@@ -2,7 +2,7 @@ import { Attendee } from "../../attendees/model/attendees.interface";
 
 export interface Presentation {
   presentation: string;
-  id: number;
+  id?: number;
   details: string;
   room: number;
   speaker: Speaker;
@@ -10,6 +10,7 @@ export interface Presentation {
 }
 
 export interface Speaker {
+  id?: number;
   name: string;
   company: string;
   email: string;
