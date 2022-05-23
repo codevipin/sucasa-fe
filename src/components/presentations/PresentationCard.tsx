@@ -90,7 +90,7 @@ export default function PresentationCard({
               Attendees
             </Typography>
             <Typography variant="body2">
-              {presentation.attendees.length}
+              {presentation.attendees?.length || 0}
             </Typography>
           </Box>
         </Box>
@@ -119,13 +119,13 @@ export default function PresentationCard({
             Company: {presentation.speaker?.company || "-"}
           </Typography>
 
-          {!!presentation.attendees.length && (
+          {!!presentation.attendees?.length && (
             <>
               <Typography sx={{ mt: 1 }} variant="h6">
                 Attendees
               </Typography>
               {presentation.attendees.map((it) => (
-                <Typography>{it.name}</Typography>
+                <Typography key={it.email}>{it.name}</Typography>
               ))}
             </>
           )}

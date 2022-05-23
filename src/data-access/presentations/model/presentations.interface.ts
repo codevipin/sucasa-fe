@@ -6,7 +6,7 @@ export interface Presentation {
   details: string;
   room: number;
   speaker: Speaker;
-  attendees: Attendee[];
+  attendees?: Attendee[];
 }
 
 export interface Speaker {

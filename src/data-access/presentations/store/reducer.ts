@@ -1,11 +1,14 @@
-import { PRESENTATIONS_MOCK } from "../mocks/presentations.mock";
 import {
   LoadAllPresentationAction,
   LoadPresentationAction,
   PresentationsState,
 } from "../model/store.interface";
 
-import { LOAD_ALL_PRESENTATION, LOAD_PRESENTATION } from "./action-types";
+import {
+  ADD_PRESENTATION,
+  LOAD_ALL_PRESENTATION,
+  LOAD_PRESENTATION,
+} from "./action-types";
 
 const intialSate: PresentationsState = {
   presentations: [],
@@ -26,6 +29,12 @@ const reducer = (
       return {
         ...state,
         presentations: [...state.presentations, presentation],
+      };
+    case ADD_PRESENTATION:
+      const newPresentation = (action as LoadPresentationAction).presentation;
+      return {
+        ...state,
+        presentations: [newPresentation, ...state.presentations],
       };
     default:
       return state;
