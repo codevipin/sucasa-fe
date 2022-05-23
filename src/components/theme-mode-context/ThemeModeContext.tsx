@@ -26,7 +26,7 @@ const ThemeModeProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <ThemeModeUpdateContext.Provider value={toggleTheme}>
-      <ThemeProvider theme={darkTheme}>{children}</ThemeProvider>;
+      <ThemeProvider theme={darkTheme}>{children}</ThemeProvider>
     </ThemeModeUpdateContext.Provider>
   );
 };
