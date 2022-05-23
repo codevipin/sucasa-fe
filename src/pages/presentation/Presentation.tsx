@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import Divider from "@mui/material/Divider";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
@@ -10,7 +10,13 @@ import MailIcon from "@mui/icons-material/Mail";
 import Typography from "@mui/material/Typography";
 import PageLayout from "../../common/components/page-layout/PageLayout";
 
+import { useActionCreators } from "../../data-access/hooks";
+
 export default function Presentation() {
+  const { fetchPlanetsAction } = useActionCreators();
+  useEffect(() => {
+    fetchPlanetsAction();
+  }, []);
   const drawer = (
     <div>
       <Divider />
