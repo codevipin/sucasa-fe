@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
-import Attendees from "./pages/attendees/Attendees";
+import Attendees from "./pages/attendee/Attendees";
 import Navbar from "./components/navbar/Navbar";
 import Presentation from "./pages/presentation/Presentation";
 import ThemeModeProvider from "./components/theme-mode-context/ThemeModeContext";
