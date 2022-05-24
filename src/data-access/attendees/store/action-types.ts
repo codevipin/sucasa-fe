@@ -1,0 +1,2 @@
+export const LOAD_ALL_ATTENDEES = "LOAD_ALL_ATTENDEES";
+export const ADD_ATTENDEE = "ADD_ATTENDEE";

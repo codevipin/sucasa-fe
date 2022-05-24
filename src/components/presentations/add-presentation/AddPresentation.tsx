@@ -1,7 +1,7 @@
 import { Button, TextField, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import React, { useState } from "react";
-import { PresentationInitValues } from "../../../data-access/presentations/model/formValues";
+import { PresentationInitValues } from "../../../data-access/presentations/model/form-values";
 import { Presentation } from "../../../data-access/presentations/model/presentations.interface";
 
 interface AddPresentationProps {

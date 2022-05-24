@@ -13,7 +13,6 @@ export default function Presentation() {
   const presentations = useAppSelector(selectPresentations);
   const addNewPresentation = (presentation: IPresentation) => {
     addPresentationAction(presentation);
-    console.log("emit eveent now", presentation);
   };
 
   useEffect(() => {
