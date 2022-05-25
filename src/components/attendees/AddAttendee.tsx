@@ -34,7 +34,7 @@ export default function AddAttendee({ submitFormHandler }: AddAttendeeProps) {
       autoComplete="off"
     >
       <Typography sx={{ mb: 1 }} variant="h5">
-        Add Attendee
+        Add New Attendee
       </Typography>
       <Typography sx={{ mb: 1, textAlign: "left" }} variant="body1">
         Name

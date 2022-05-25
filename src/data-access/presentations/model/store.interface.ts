@@ -9,6 +9,11 @@ export interface LoadPresentationAction extends ReduxAction {
   presentation: Presentation;
 }
 
+export interface AddAttendeeToPresentationAction extends ReduxAction {
+  presentationId: number;
+  attendeeId: number;
+}
+
 export type LoadAllPresentationDispatchType = (
   args: LoadAllPresentationAction
 ) => LoadAllPresentationAction;
@@ -18,5 +23,9 @@ export interface PresentationsState {
 }
 
 export type LoadPresentationDispatchType = (
+  args: LoadPresentationAction
+) => LoadPresentationAction;
+
+export type AddAttendeeToPresentationDispatchType = (
   args: LoadPresentationAction
 ) => LoadPresentationAction;

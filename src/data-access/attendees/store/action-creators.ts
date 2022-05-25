@@ -1,3 +1,4 @@
+import store from "../../store";
 import { Attendee } from "../model/attendees.interface";
 import {
   AddAttendeeDispatchType,
@@ -8,10 +9,14 @@ import { ADD_ATTENDEE, LOAD_ALL_ATTENDEES } from "./action-types";
 
 export const fetchAllAttendeesAction = () => {
   return async (dispatch: LoadAllAttendeeDispatchType) => {
-    const attendees = await attendeesService.fetchAttendees();
+    const getAttendees = async () => {
+      const dataInStore = store.getState().attendees.attendees;
+      if (!!dataInStore?.length) return dataInStore;
+      return await attendeesService.fetchAttendees();
+    };
     dispatch({
       type: LOAD_ALL_ATTENDEES,
-      attendees,
+      attendees: await getAttendees(),
     });
   };
 };
