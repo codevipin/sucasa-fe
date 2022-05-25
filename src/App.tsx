@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
-import Attendees from "./pages/attendee/Attendees";
 import Navbar from "./components/navbar/Navbar";
 import Presentation from "./pages/presentation/Presentation";
 import ThemeModeProvider from "./components/theme-mode-context/ThemeModeContext";
+import AttendeePage from "./pages/attendee/Attendees";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/presentations" element={<Presentation />} />
-          <Route path="/attendees" element={<Attendees />} />
+          <Route path="/attendees" element={<AttendeePage />} />
         </Routes>
       </ThemeModeProvider>
     </div>
